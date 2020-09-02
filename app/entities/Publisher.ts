@@ -1,12 +1,12 @@
-import { ObjectID } from 'mongodb';
-import { Collection, Entity, Enum, OneToMany, PrimaryKey, Property, SerializedPrimaryKey, MongoEntity } from 'mikro-orm';
+import { ObjectId } from '@mikro-orm/mongodb';
+import { Collection, Entity, Enum, OneToMany, PrimaryKey, Property, SerializedPrimaryKey } from '@mikro-orm/core';
 import { Book } from '.';
 
 @Entity()
-export class Publisher implements MongoEntity<Publisher> {
+export class Publisher {
 
   @PrimaryKey()
-  _id!: ObjectID;
+  _id!: ObjectId;
 
   @SerializedPrimaryKey()
   id!: string;

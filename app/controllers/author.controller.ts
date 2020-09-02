@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import Router from 'express-promise-router';
-import { QueryOrder, wrap } from 'mikro-orm';
+import { QueryOrder, wrap } from '@mikro-orm/core';
 
 import { DI } from '../server';
 import { Author } from '../entities';

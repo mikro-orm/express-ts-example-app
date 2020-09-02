@@ -1,12 +1,12 @@
-import { ObjectID } from 'mongodb';
-import { Collection, Entity, ManyToMany, MongoEntity, PrimaryKey, Property, SerializedPrimaryKey } from 'mikro-orm';
+import { ObjectId } from '@mikro-orm/mongodb';
+import { Collection, Entity, ManyToMany, PrimaryKey, Property, SerializedPrimaryKey } from '@mikro-orm/core';
 import { Book } from '.';
 
 @Entity()
-export class BookTag implements MongoEntity<BookTag> {
+export class BookTag {
 
   @PrimaryKey()
-  _id!: ObjectID;
+  _id!: ObjectId;
 
   @SerializedPrimaryKey()
   id!: string;

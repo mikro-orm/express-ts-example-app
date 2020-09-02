@@ -1,9 +1,9 @@
+import 'reflect-metadata';
 import express from 'express';
-import { EntityManager, EntityRepository, MikroORM, RequestContext } from 'mikro-orm';
+import { EntityManager, EntityRepository, MikroORM, RequestContext } from '@mikro-orm/core';
 
 import { AuthorController, BookController } from './controllers';
-import { Author, Book, BookTag, Publisher } from './entities';
-import { BaseEntity } from './entities/BaseEntity';
+import { Author, Book } from './entities';
 
 export const DI = {} as {
   orm: MikroORM,
@@ -16,13 +16,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 (async () => {
-  DI.orm = await MikroORM.init({
-    entities: [Author, Book, BookTag, Publisher, BaseEntity],
-    entitiesDirsTs: ['app/entities'],
-    dbName: 'mikro-orm-express-ts',
-    logger: console.log.bind(console),
-    debug: true,
-  });
+  DI.orm = await MikroORM.init();
   DI.em = DI.orm.em;
   DI.authorRepository = DI.orm.em.getRepository(Author);
   DI.bookRepository = DI.orm.em.getRepository(Book);
