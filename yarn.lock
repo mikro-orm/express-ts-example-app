@@ -15,7 +15,7 @@
     is-absolute "^1.0.0"
     is-negated-glob "^1.0.0"
 
-"@mikro-orm/cli@^4.0.0-rc.6":
+"@mikro-orm/cli@4.0.0-rc.6":
   version "4.0.0-rc.6"
   resolved "https://registry.yarnpkg.com/@mikro-orm/cli/-/cli-4.0.0-rc.6.tgz#d1f77926557e60ff086a4cefbd883ecf87916ba2"
   integrity sha512-6Ri7TDlBbBGybQQFXSLhvJKRXSXL90N6LTev6uAul2+vGeCODA+qM6h6SQa13ZVV+HXKlDAfCaUlRgVSGA9Q9A==
@@ -31,7 +31,7 @@
     yargonaut "^1.1.4"
     yargs "^15.3.1"
 
-"@mikro-orm/core@^4.0.0-rc.6":
+"@mikro-orm/core@4.0.0-rc.6", "@mikro-orm/core@^4.0.0-rc.6":
   version "4.0.0-rc.6"
   resolved "https://registry.yarnpkg.com/@mikro-orm/core/-/core-4.0.0-rc.6.tgz#43fe8600e0b1a92a95f752ebfeedac4d29180b43"
   integrity sha512-Q5R4IZD//I4DX/FX5K05I078BmZtJEA0IYuUGSfn3bFoixHya3OfM0ZVYdpvgDacMo9IpqGn25C5hn2fmbEDCQ==
@@ -74,14 +74,14 @@
     ts-morph "^8.0.0"
     umzug "^2.3.0"
 
-"@mikro-orm/mongo-highlighter@^1.0.0":
+"@mikro-orm/mongo-highlighter@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@mikro-orm/mongo-highlighter/-/mongo-highlighter-1.0.0.tgz#904e086083ed0da10b58007f1e010d745de4dada"
   integrity sha512-pPb/f1TKDBbJ8fH6Bbc5qMr/52edtA+vQrEKmuF3T7z9/feMrS6laW6FIpJXJJeP5sn0w4udjc/BIc4ntm4QHg==
   dependencies:
     ansi-colors "^4.1.1"
 
-"@mikro-orm/mongodb@^4.0.0-rc.6":
+"@mikro-orm/mongodb@4.0.0-rc.6":
   version "4.0.0-rc.6"
   resolved "https://registry.yarnpkg.com/@mikro-orm/mongodb/-/mongodb-4.0.0-rc.6.tgz#dfe7cc07356a085b96e296bfbd7fac779a2054d9"
   integrity sha512-mRVwB8TpnuLFA7/LK4Y9f0g/L9WS8CoiXkUoujCcsfhhqmRZN8NPD/NZdfQtJVekneQrG4yfxAaTMCbLzw9BEg==
@@ -161,7 +161,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/express-promise-router@^3.0.0":
+"@types/express-promise-router@3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/express-promise-router/-/express-promise-router-3.0.0.tgz#e70f3e87db55c14b54338c10f6cd91e1cbcca16d"
   integrity sha512-5rUFqHnYnM282aNqIiARvJcGNMKE8JQ3Q4l1Le7PSb2bZltmJr355RWMIvnERvzdlsgmArUZBLuoCVhQ2ErzeA==
@@ -776,7 +776,7 @@ express-promise-router@*:
     lodash.flattendeep "^4.0.0"
     methods "^1.0.0"
 
-express-promise-router@^4.0.1:
+express-promise-router@4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/express-promise-router/-/express-promise-router-4.0.1.tgz#7ed65473a12208ec1065c1358c398175b89d425c"
   integrity sha512-kqan6QuMV7FdfN9b2uYpaKEJnxzfj57voI4IsMjgug5mBc6/hjuvoUT76Z/pvRqID2isl/NygTUe8S2MH2trMg==
@@ -785,7 +785,7 @@ express-promise-router@^4.0.1:
     lodash.flattendeep "^4.0.0"
     methods "^1.0.0"
 
-express@^4.17.1:
+express@4.17.1:
   version "4.17.1"
   resolved "https://registry.yarnpkg.com/express/-/express-4.17.1.tgz#4491fc38605cf51f8629d39c2b5d026f98a4c134"
   integrity sha512-mHJ9O79RqluphRrcw2X/GTh3k9tVv8YcoyY4Kkh4WDMUYKRZUq0h1o0w2rrrxBqM7VoeUVqgb27xlEMXTnYt4g==
@@ -2221,7 +2221,7 @@ ts-morph@^8.0.0:
     "@ts-morph/common" "~0.6.0"
     code-block-writer "^10.1.0"
 
-ts-node@^9.0.0:
+ts-node@9.0.0:
   version "9.0.0"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-9.0.0.tgz#e7699d2a110cc8c0d3b831715e417688683460b3"
   integrity sha512-/TqB4SnererCDR/vb4S/QvSZvzQMJN8daAslg7MeaiHvD8rDZsSfXmNeNumyZZzMned72Xoq/isQljYSt8Ynfg==
@@ -2232,7 +2232,7 @@ ts-node@^9.0.0:
     source-map-support "^0.5.17"
     yn "3.1.1"
 
-tsc-watch@^4.2.9:
+tsc-watch@4.2.9:
   version "4.2.9"
   resolved "https://registry.yarnpkg.com/tsc-watch/-/tsc-watch-4.2.9.tgz#d93fc74233ca4ef7ee6b12d08c0fe6aca3e19044"
   integrity sha512-DlTaoDs74+KUpyWr7dCGhuscAUKCz6CiFduBN7R9RbLJSSN1moWdwoCLASE7+zLgGvV5AwXfYDiEMAsPGaO+Vw==
