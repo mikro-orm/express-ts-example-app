@@ -22,7 +22,7 @@
     "@mikro-orm/cli": "^4.0.0-rc.6",
     "@types/express": "4.17.2",
     "@types/express-promise-router": "^3.0.0",
-    "ts-node": "^9.0.0"
+    "ts-node": "^10.0.0"
   },
   "mikro-orm": {
     "useTsNode": true,
