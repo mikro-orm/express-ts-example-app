@@ -7,20 +7,26 @@ import { Book } from '../entities';
 const router = Router();
 
 router.get('/', async (req: Request, res: Response) => {
-  const books = await DI.bookRepository.findAll(['author'], { title: QueryOrder.DESC }, 20);
+  const books = await DI.bookRepository.findAll({
+    populate: ['author'],
+    orderBy: { title: QueryOrder.DESC },
+    limit: 20,
+  });
   res.json(books);
 });
 
 router.get('/:id', async (req: Request, res: Response) => {
   try {
-    const book = await DI.bookRepository.findOne(+req.params.id, ['author']);
+    const book = await DI.bookRepository.findOne(req.params.id, {
+      populate: ['author'],
+    });
 
     if (!book) {
       return res.status(404).json({ message: 'Book not found' });
     }
 
     res.json(book);
-  } catch (e) {
+  } catch (e: any) {
     return res.status(400).json({ message: e.message });
   }
 });
@@ -32,19 +38,19 @@ router.post('/', async (req: Request, res: Response) => {
   }
 
   try {
-    const book = new Book(req.body.title, req.body.author);
-    wrap(book).assign(req.body);
+    const book = DI.em.create(Book, req.body);
+    wrap(book.author, true).__initialized = true;
     await DI.bookRepository.persist(book).flush();
 
     res.json(book);
-  } catch (e) {
+  } catch (e: any) {
     return res.status(400).json({ message: e.message });
   }
 });
 
 router.put('/:id', async (req: Request, res: Response) => {
   try {
-    const book = await DI.bookRepository.findOne(+req.params.id);
+    const book = await DI.bookRepository.findOne(req.params.id);
 
     if (!book) {
       return res.status(404).json({ message: 'Book not found' });
@@ -54,7 +60,7 @@ router.put('/:id', async (req: Request, res: Response) => {
     await DI.bookRepository.flush();
 
     res.json(book);
-  } catch (e) {
+  } catch (e: any) {
     return res.status(400).json({ message: e.message });
   }
 });

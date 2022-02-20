@@ -12,19 +12,19 @@ export class Author extends BaseEntity {
   @Property()
   email: string;
 
-  @Property()
+  @Property({ nullable: true })
   age?: number;
 
   @Property()
   termsAccepted = false;
 
-  @Property()
+  @Property({ nullable: true })
   born?: Date;
 
   @OneToMany(() => Book, b => b.author, { cascade: [Cascade.ALL] })
   books = new Collection<Book>(this);
 
-  @ManyToOne(() => Book)
+  @ManyToOne(() => Book, { nullable: true })
   favouriteBook?: Book;
 
   constructor(name: string, email: string) {
