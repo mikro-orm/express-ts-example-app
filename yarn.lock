@@ -3633,10 +3633,10 @@ ts-node@^10.5.0:
     v8-compile-cache-lib "^3.0.0"
     yn "3.1.1"
 
-tsc-watch@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/tsc-watch/-/tsc-watch-4.6.0.tgz#a0eba1300cbe3048ab6d3a3e06de47141b613beb"
-  integrity sha512-DRMADjFe44EDWb+YMIOj4b83UrU6le27L3/o0/9FlmA01ikFd5Dl9RD5h1hpeh0mQdIqXvwfHZszCcjhH3bAmQ==
+tsc-watch@^5.0.0:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/tsc-watch/-/tsc-watch-5.0.2.tgz#4baf19af911b59e6cb1e78dcfbe8834cc2f4c238"
+  integrity sha512-TaOOLY2xJCorxCt6seXhNH/35p991rp2GkddSA3S8wxc6utBeVFVMFnlK8UEsf7I07So8NZ/IpDDb3nBNhN4DA==
   dependencies:
     cross-spawn "^7.0.3"
     node-cleanup "^2.1.2"
