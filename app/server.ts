@@ -1,4 +1,3 @@
-import 'reflect-metadata';
 import http from 'http';
 import express, { Application } from 'express';
 import { EntityManager, EntityRepository, MikroORM, RequestContext } from '@mikro-orm/core';
