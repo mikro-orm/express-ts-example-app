@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import http from 'http';
-import express from 'express';
+import express, { Application } from 'express';
 import { EntityManager, EntityRepository, MikroORM, RequestContext } from '@mikro-orm/core';
 
 import { AuthorController, BookController } from './controllers';
@@ -14,7 +14,7 @@ export const DI = {} as {
   bookRepository: EntityRepository<Book>,
 };
 
-export const app = express();
+export const app:Application = express();
 const port = process.env.PORT || 3000;
 
 export const init = (async () => {
