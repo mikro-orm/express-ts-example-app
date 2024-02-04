@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import http from 'http';
 import express from 'express';
-import { EntityManager, EntityRepository, MikroORM, RequestContext } from '@mikro-orm/core';
+import { EntityManager, EntityRepository, MikroORM, RequestContext } from '@mikro-orm/mongodb';
 
 import { AuthorController, BookController } from './controllers';
 import { Author, Book } from './entities';
@@ -10,8 +10,8 @@ export const DI = {} as {
   server: http.Server;
   orm: MikroORM,
   em: EntityManager,
-  authorRepository: EntityRepository<Author>,
-  bookRepository: EntityRepository<Book>,
+  authors: EntityRepository<Author>,
+  books: EntityRepository<Book>,
 };
 
 export const app = express();
@@ -20,8 +20,8 @@ const port = process.env.PORT || 3000;
 export const init = (async () => {
   DI.orm = await MikroORM.init();
   DI.em = DI.orm.em;
-  DI.authorRepository = DI.orm.em.getRepository(Author);
-  DI.bookRepository = DI.orm.em.getRepository(Book);
+  DI.authors = DI.orm.em.getRepository(Author);
+  DI.books = DI.orm.em.getRepository(Book);
 
   app.use(express.json());
   app.use((req, res, next) => RequestContext.create(DI.orm.em, next));

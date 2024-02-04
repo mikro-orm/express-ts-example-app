@@ -1,6 +1,5 @@
-import { ObjectId } from '@mikro-orm/mongodb';
-import { Collection, Entity, Enum, OneToMany, PrimaryKey, Property, SerializedPrimaryKey } from '@mikro-orm/core';
-import { Book } from '.';
+import { ObjectId, Collection, Entity, Enum, OneToMany, PrimaryKey, Property, SerializedPrimaryKey } from '@mikro-orm/mongodb';
+import { Book } from './Book';
 
 @Entity()
 export class Publisher {
@@ -14,7 +13,7 @@ export class Publisher {
   @Property()
   name: string;
 
-  @Enum()
+  @Enum(() => PublisherType)
   type: PublisherType;
 
   @OneToMany(() => Book, b => b.publisher)

@@ -1,13 +1,13 @@
 import { Request, Response } from 'express';
 import Router from 'express-promise-router';
-import { QueryOrder, wrap } from '@mikro-orm/core';
+import { QueryOrder, wrap } from '@mikro-orm/mongodb';
 
 import { DI } from '../server';
 
 const router = Router();
 
 router.get('/', async (req: Request, res: Response) => {
-  const authors = await DI.authorRepository.findAll({
+  const authors = await DI.authors.findAll({
     populate: ['books'],
     orderBy: { name: QueryOrder.DESC },
     limit: 20,
@@ -17,7 +17,7 @@ router.get('/', async (req: Request, res: Response) => {
 
 router.get('/:id', async (req: Request, res: Response) => {
   try {
-    const author = await DI.authorRepository.findOneOrFail(req.params.id, {
+    const author = await DI.authors.findOneOrFail(req.params.id, {
       populate: ['books'],
     });
 
@@ -34,8 +34,8 @@ router.post('/', async (req: Request, res: Response) => {
   }
 
   try {
-    const author = DI.authorRepository.create(req.body);
-    await DI.authorRepository.persist(author).flush();
+    const author = DI.authors.create(req.body);
+    await DI.em.flush();
 
     res.json(author);
   } catch (e: any) {
@@ -45,9 +45,9 @@ router.post('/', async (req: Request, res: Response) => {
 
 router.put('/:id', async (req: Request, res: Response) => {
   try {
-    const author = await DI.authorRepository.findOneOrFail(req.params.id);
+    const author = await DI.authors.findOneOrFail(req.params.id);
     wrap(author).assign(req.body);
-    await DI.authorRepository.flush();
+    await DI.em.flush();
 
     res.json(author);
   } catch (e: any) {

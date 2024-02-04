@@ -1,13 +1,13 @@
 import { Request, Response } from 'express';
 import Router from 'express-promise-router';
-import { QueryOrder, wrap } from '@mikro-orm/core';
+import { QueryOrder, wrap } from '@mikro-orm/mongodb';
 import { DI } from '../server';
 import { Book } from '../entities';
 
 const router = Router();
 
 router.get('/', async (req: Request, res: Response) => {
-  const books = await DI.bookRepository.findAll({
+  const books = await DI.books.findAll({
     populate: ['author'],
     orderBy: { title: QueryOrder.DESC },
     limit: 20,
@@ -17,7 +17,7 @@ router.get('/', async (req: Request, res: Response) => {
 
 router.get('/:id', async (req: Request, res: Response) => {
   try {
-    const book = await DI.bookRepository.findOne(req.params.id, {
+    const book = await DI.books.findOne(req.params.id, {
       populate: ['author'],
     });
 
@@ -39,8 +39,7 @@ router.post('/', async (req: Request, res: Response) => {
 
   try {
     const book = DI.em.create(Book, req.body);
-    wrap(book.author, true).__initialized = true;
-    await DI.bookRepository.persist(book).flush();
+    await DI.em.flush();
 
     res.json(book);
   } catch (e: any) {
@@ -50,14 +49,14 @@ router.post('/', async (req: Request, res: Response) => {
 
 router.put('/:id', async (req: Request, res: Response) => {
   try {
-    const book = await DI.bookRepository.findOne(req.params.id);
+    const book = await DI.books.findOne(req.params.id);
 
     if (!book) {
       return res.status(404).json({ message: 'Book not found' });
     }
 
     wrap(book).assign(req.body);
-    await DI.bookRepository.flush();
+    await DI.em.flush();
 
     res.json(book);
   } catch (e: any) {

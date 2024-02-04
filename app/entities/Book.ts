@@ -1,4 +1,4 @@
-import { Cascade, Collection, Entity, ManyToMany, ManyToOne, Property } from '@mikro-orm/core';
+import { Cascade, Collection, Entity, ManyToMany, ManyToOne, Property } from '@mikro-orm/mongodb';
 import { Author, BookTag, Publisher } from './index';
 import { BaseEntity } from './BaseEntity';
 
@@ -8,7 +8,7 @@ export class Book extends BaseEntity {
   @Property()
   title: string;
 
-  @ManyToOne()
+  @ManyToOne(() => Author)
   author: Author;
 
   @ManyToOne(() => Publisher, { cascade: [Cascade.PERSIST, Cascade.REMOVE], nullable: true })
