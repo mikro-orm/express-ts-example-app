@@ -14,7 +14,7 @@
     "@mikro-orm/core": "^6.0.0",
     "@mikro-orm/mongo-highlighter": "^1.0.0",
     "@mikro-orm/mongodb": "^6.0.0",
-    "express": "^4.18.2",
+    "express": "^4.19.2",
     "express-promise-router": "^4.1.1",
     "tsc-watch": "^6.0.4",
     "typescript": "5.3.3"
