@@ -5,6 +5,7 @@ import { EntityManager, EntityRepository, MikroORM, RequestContext } from '@mikr
 
 import { AuthorController, BookController } from './controllers';
 import { Author, Book } from './entities';
+import config from './mikro-orm.config';
 
 export const DI = {} as {
   server: http.Server;
@@ -18,7 +19,7 @@ export const app = express();
 const port = process.env.PORT || 3000;
 
 export const init = (async () => {
-  DI.orm = await MikroORM.init();
+  DI.orm = await MikroORM.init(config);
   DI.em = DI.orm.em;
   DI.authors = DI.orm.em.getRepository(Author);
   DI.books = DI.orm.em.getRepository(Book);
