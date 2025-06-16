@@ -14,14 +14,14 @@
     "@mikro-orm/core": "^6.4.5",
     "@mikro-orm/mongo-highlighter": "^1.0.0",
     "@mikro-orm/mongodb": "^6.4.5",
-    "express": "^4.18.2",
+    "express": "^5.0.0",
     "express-promise-router": "^4.1.1",
     "tsc-watch": "^7.0.0",
     "typescript": "5.8.3"
   },
   "devDependencies": {
     "@mikro-orm/cli": "^6.4.5",
-    "@types/express": "^4.17.21",
+    "@types/express": "^5.0.0",
     "@types/express-promise-router": "^3.0.0",
     "@types/jest": "30.0.0",
     "@types/node": "22.15.31",
