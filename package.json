@@ -24,7 +24,7 @@
     "@types/express": "^4.17.21",
     "@types/express-promise-router": "^3.0.0",
     "@types/jest": "30.0.0",
-    "@types/node": "22.15.32",
+    "@types/node": "22.15.33",
     "@types/supertest": "^6.0.2",
     "jest": "30.0.2",
     "supertest": "^7.0.0",
