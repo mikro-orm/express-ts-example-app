@@ -26,7 +26,7 @@
     "@types/jest": "30.0.0",
     "@types/node": "22.15.33",
     "@types/supertest": "^6.0.2",
-    "jest": "30.0.2",
+    "jest": "30.0.3",
     "supertest": "^7.0.0",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2"
