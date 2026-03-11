@@ -1,10 +1,11 @@
 import { defineConfig } from '@mikro-orm/mongodb';
-import { MongoHighlighter } from '@mikro-orm/mongo-highlighter';
+import { ReflectMetadataProvider } from '@mikro-orm/decorators/legacy';
 import { Author, Book, BookTag, Publisher, BaseEntity } from './entities';
 
 export default defineConfig({
   entities: [Author, Book, BookTag, Publisher, BaseEntity],
   dbName: 'mikro-orm-express-ts',
-  highlighter: new MongoHighlighter(),
+  metadataProvider: ReflectMetadataProvider,
+  dynamicImportProvider: id => import(id),
   debug: true,
 });

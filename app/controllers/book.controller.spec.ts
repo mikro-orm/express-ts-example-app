@@ -9,7 +9,7 @@ describe('book controller', () => {
     DI.orm.config.set('dbName', 'express-test-db');
     DI.orm.config.getLogger().setDebugMode(false);
     await DI.orm.config.getDriver().reconnect();
-    await DI.orm.getSchemaGenerator().clearDatabase();
+    await DI.orm.schema.clear();
   });
 
   afterAll(async () => {

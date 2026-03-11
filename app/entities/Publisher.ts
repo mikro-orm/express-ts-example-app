@@ -1,4 +1,5 @@
-import { ObjectId, Collection, Entity, Enum, OneToMany, PrimaryKey, Property, SerializedPrimaryKey } from '@mikro-orm/mongodb';
+import { Entity, Enum, OneToMany, PrimaryKey, Property, SerializedPrimaryKey } from '@mikro-orm/decorators/legacy';
+import { ObjectId, Collection } from '@mikro-orm/mongodb';
 import { Book } from './Book';
 
 @Entity()

@@ -4,6 +4,9 @@
   "description": "Example integration of MikroORM into express (in typescript)",
   "author": "Martin Adamek",
   "license": "MIT",
+  "engines": {
+    "node": ">= 22.17.0"
+  },
   "scripts": {
     "start": "tsc && node dist/server",
     "start:dev": "tsc-watch --onSuccess \"node dist/server\"",
@@ -11,16 +14,16 @@
     "test": "jest --runInBand --silent"
   },
   "dependencies": {
-    "@mikro-orm/core": "^6.4.5",
-    "@mikro-orm/mongo-highlighter": "^1.0.0",
-    "@mikro-orm/mongodb": "^6.4.5",
+    "@mikro-orm/core": "^7.0.1",
+    "@mikro-orm/decorators": "^7.0.1",
+    "@mikro-orm/mongodb": "^7.0.1",
     "express": "^4.18.2",
     "express-promise-router": "^4.1.1",
     "tsc-watch": "^7.0.0",
     "typescript": "5.9.3"
   },
   "devDependencies": {
-    "@mikro-orm/cli": "^6.4.5",
+    "@mikro-orm/cli": "^7.0.1",
     "@types/express": "^4.17.21",
     "@types/express-promise-router": "^3.0.0",
     "@types/jest": "30.0.0",
@@ -29,10 +32,9 @@
     "jest": "30.3.0",
     "supertest": "^7.0.0",
     "ts-jest": "^29.1.2",
-    "ts-node": "^10.9.2"
+    "tsx": "^4.19.0"
   },
   "mikro-orm": {
-    "useTsNode": true,
     "configPaths": [
       "./app/mikro-orm.config.ts",
       "./dist/mikro-orm.config.js"

@@ -1,4 +1,5 @@
-import { Cascade, Collection, Entity, ManyToMany, ManyToOne, Property } from '@mikro-orm/mongodb';
+import { Entity, ManyToMany, ManyToOne, Property } from '@mikro-orm/decorators/legacy';
+import { Cascade, Collection } from '@mikro-orm/mongodb';
 import { Author, BookTag, Publisher } from './index';
 import { BaseEntity } from './BaseEntity';
 
