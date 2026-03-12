@@ -1,13 +1,13 @@
-version: "3.4"
-
 services:
   mongo:
     container_name: mongo
     image: mongo:8.2
     ports:
       - "27017:27017"
-    volumes:
-      - mongo:/data/db
-
-volumes:
-  mongo:
+    tmpfs:
+      - /data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
