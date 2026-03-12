@@ -1,5 +1,4 @@
 import request from 'supertest';
-import expect from 'expect';
 import { init, app, DI } from '../server';
 
 describe('book controller', () => {
