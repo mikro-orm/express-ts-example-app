@@ -22,7 +22,7 @@
     "express-promise-router": "^4.1.1",
     "reflect-metadata": "^0.2.0",
     "tsc-watch": "^7.0.0",
-    "typescript": "5.9.3"
+    "typescript": "6.0.2"
   },
   "devDependencies": {
     "@mikro-orm/cli": "^7.0.1",
