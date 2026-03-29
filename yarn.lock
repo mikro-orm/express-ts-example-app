@@ -310,7 +310,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mikro-orm/core@npm:7.0.1, @mikro-orm/core@npm:^7.0.1":
+"@mikro-orm/core@npm:7.0.1":
   version: 7.0.1
   resolution: "@mikro-orm/core@npm:7.0.1"
   peerDependencies:
@@ -319,6 +319,18 @@ __metadata:
     dataloader:
       optional: true
   checksum: 10c0/c0c87c728e15fe332ce0c2fb2b1517517f4f9af2a66bdd3781256c98f3367a82a843634b1f4069666cd0b10a8407112648e7c9f669412f788ddcd1b024a11f81
+  languageName: node
+  linkType: hard
+
+"@mikro-orm/core@npm:^7.0.6":
+  version: 7.0.6
+  resolution: "@mikro-orm/core@npm:7.0.6"
+  peerDependencies:
+    dataloader: 2.2.3
+  peerDependenciesMeta:
+    dataloader:
+      optional: true
+  checksum: 10c0/a21c7dd62a161be7c303a370eac296717b5cb6168619286763d3f5c7099a3aee149ba931f719cce36f0aad560ac88c2dad5fb03ec1ead6fb7f107ba167a09ee9
   languageName: node
   linkType: hard
 
@@ -2555,7 +2567,7 @@ __metadata:
   resolution: "mikro-orm-express-ts-example@workspace:."
   dependencies:
     "@mikro-orm/cli": "npm:^7.0.1"
-    "@mikro-orm/core": "npm:^7.0.1"
+    "@mikro-orm/core": "npm:^7.0.6"
     "@mikro-orm/decorators": "npm:^7.0.1"
     "@mikro-orm/mongodb": "npm:^7.0.1"
     "@swc-node/register": "npm:^1.11.1"
