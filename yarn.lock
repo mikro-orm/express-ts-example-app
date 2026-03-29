@@ -297,32 +297,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mikro-orm/cli@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "@mikro-orm/cli@npm:7.0.1"
+"@mikro-orm/cli@npm:^7.0.6":
+  version: 7.0.6
+  resolution: "@mikro-orm/cli@npm:7.0.6"
   dependencies:
-    "@mikro-orm/core": "npm:7.0.1"
-    mikro-orm: "npm:7.0.1"
+    "@mikro-orm/core": "npm:7.0.6"
+    mikro-orm: "npm:7.0.6"
     yargs: "npm:17.7.2"
   bin:
-    mikro-orm: cli
-  checksum: 10c0/fa4431d9a146f0685a6fd6ea35e20c6b60703ddcb225fee69e8ffdeb997dff796f70dd80a71193e6ddc42c6439204451db5f435becbf19f289b7526e721f3c2e
+    mikro-orm: cli.js
+  checksum: 10c0/56122e070a1a6755cdbbc088f87e11a16bd1208ba7ea6eed99735e497dd0c21b4cb5c96b2d4c6323d7f66455923659c9eb70e0ea18ff7d66a9d2ddd20ea7dcfb
   languageName: node
   linkType: hard
 
-"@mikro-orm/core@npm:7.0.1":
-  version: 7.0.1
-  resolution: "@mikro-orm/core@npm:7.0.1"
-  peerDependencies:
-    dataloader: 2.2.3
-  peerDependenciesMeta:
-    dataloader:
-      optional: true
-  checksum: 10c0/c0c87c728e15fe332ce0c2fb2b1517517f4f9af2a66bdd3781256c98f3367a82a843634b1f4069666cd0b10a8407112648e7c9f669412f788ddcd1b024a11f81
-  languageName: node
-  linkType: hard
-
-"@mikro-orm/core@npm:^7.0.1":
+"@mikro-orm/core@npm:7.0.6, @mikro-orm/core@npm:^7.0.6":
   version: 7.0.6
   resolution: "@mikro-orm/core@npm:7.0.6"
   peerDependencies:
@@ -334,27 +322,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mikro-orm/decorators@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "@mikro-orm/decorators@npm:7.0.1"
+"@mikro-orm/decorators@npm:^7.0.6":
+  version: 7.0.6
+  resolution: "@mikro-orm/decorators@npm:7.0.6"
   peerDependencies:
-    "@mikro-orm/core": 7.0.1
+    "@mikro-orm/core": 7.0.6
     reflect-metadata: ^0.1.0 || ^0.2.0
   peerDependenciesMeta:
     reflect-metadata:
       optional: true
-  checksum: 10c0/b5b4cb53778a348939190670970f27adb2f466a769c365e6059e3627abb6755a14866f8414d189da3eafd4ec66a0a16c958f97a5a6ad2eccc8c7142df6fb39d9
+  checksum: 10c0/87aeec93f050c8e85d383ca9b9ba832a2fed931801fb458c277db61c6c6b9686013e6d8ea6ee97c32419ff33d73794b4ad46a02911bf65ac7d6aabe35b865bab
   languageName: node
   linkType: hard
 
-"@mikro-orm/mongodb@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "@mikro-orm/mongodb@npm:7.0.1"
+"@mikro-orm/mongodb@npm:^7.0.6":
+  version: 7.0.6
+  resolution: "@mikro-orm/mongodb@npm:7.0.6"
   dependencies:
-    mongodb: "npm:7.1.0"
+    mongodb: "npm:7.1.1"
   peerDependencies:
-    "@mikro-orm/core": 7.0.1
-  checksum: 10c0/c7694b73e1da5c07adbb6f283a98ff12cf8e767d271b3dce7d9d28a20d6c2adae56be47c45fa7a6cbc222f264f890f8e9e39f695334c70ccc1218060ff705d86
+    "@mikro-orm/core": 7.0.6
+  checksum: 10c0/67a8ad394b052d5b3bc2378437fd329a55abe84fa5a113e6f79487b417368cc782bd8dde8f6ff6e62596fc4eb27bc7114c3d170f87cfe96b88f8874b42f4426a
   languageName: node
   linkType: hard
 
@@ -2566,10 +2554,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "mikro-orm-express-ts-example@workspace:."
   dependencies:
-    "@mikro-orm/cli": "npm:^7.0.1"
-    "@mikro-orm/core": "npm:^7.0.1"
-    "@mikro-orm/decorators": "npm:^7.0.1"
-    "@mikro-orm/mongodb": "npm:^7.0.1"
+    "@mikro-orm/cli": "npm:^7.0.6"
+    "@mikro-orm/core": "npm:^7.0.6"
+    "@mikro-orm/decorators": "npm:^7.0.6"
+    "@mikro-orm/mongodb": "npm:^7.0.6"
     "@swc-node/register": "npm:^1.11.1"
     "@swc/core": "npm:^1.15.3"
     "@types/express": "npm:^4.17.21"
@@ -2588,10 +2576,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"mikro-orm@npm:7.0.1":
-  version: 7.0.1
-  resolution: "mikro-orm@npm:7.0.1"
-  checksum: 10c0/1f44801b007a574a2ac8a4978642f496f3b59b5a0f9925edc33cb9c9fef6654ad0140b4e2eb626602d457260828e1e464f2255776d70a4c732dc2925012ef4d7
+"mikro-orm@npm:7.0.6":
+  version: 7.0.6
+  resolution: "mikro-orm@npm:7.0.6"
+  checksum: 10c0/d34b5e519e2ac312eb310ceae8ce8cfce831ee4beff82365d01a1b76f8ffd9954be05d815a0a1a6f75f9aea3b3bb46176065dbc9857090a66d8329f0ea592918
   languageName: node
   linkType: hard
 
@@ -2734,9 +2722,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongodb@npm:7.1.0":
-  version: 7.1.0
-  resolution: "mongodb@npm:7.1.0"
+"mongodb@npm:7.1.1":
+  version: 7.1.1
+  resolution: "mongodb@npm:7.1.1"
   dependencies:
     "@mongodb-js/saslprep": "npm:^1.3.0"
     bson: "npm:^7.1.1"
@@ -2764,7 +2752,7 @@ __metadata:
       optional: true
     socks:
       optional: true
-  checksum: 10c0/8f566dc3d5e079966b4ff11061811713f2fc6397798295772a45a0ef2d38d701be3f16394496a870736a7ff968f6b9aeef26ab2733e9cfd3d2a6a2e4cd04e10e
+  checksum: 10c0/bfbf3e4aba3645078afc229c50d685c0f319867a64d072a926c6faf1ff2efbd7426ada03fbc30a7300a789fed09f003816d0ec9d95307c896d56f5f81b62a2bd
   languageName: node
   linkType: hard
 
