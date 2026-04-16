@@ -22,7 +22,7 @@
     "express-promise-router": "^4.1.1",
     "reflect-metadata": "^0.2.0",
     "tsc-watch": "^7.0.0",
-    "typescript": "6.0.2"
+    "typescript": "6.0.3"
   },
   "devDependencies": {
     "@mikro-orm/cli": "^7.0.6",
@@ -43,5 +43,5 @@
       "./dist/mikro-orm.config.js"
     ]
   },
-  "packageManager": "yarn@4.13.0"
+  "packageManager": "yarn@4.14.0"
 }
